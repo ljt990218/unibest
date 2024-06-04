@@ -8,7 +8,7 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
-
+import presetRemToPx from '@unocss/preset-rem-to-px'
 import { presetApplet, presetRemRpx, transformerAttributify } from 'unocss-applet'
 
 // @see https://unocss.dev/presets/legacy-compat
@@ -46,6 +46,9 @@ export default defineConfig({
     presetLegacyCompat({
       commaStyleColorFunction: true,
     }) as Preset,
+    presetRemToPx({
+      baseFontSize: 4,
+    }),
   ],
   /**
    * 自定义快捷语句

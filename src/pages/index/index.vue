@@ -9,21 +9,21 @@
 </route>
 <template>
   <view
-    class="bg-white overflow-hidden pt-2 px-4"
+    class="bg-white overflow-hidden pt-8 px-16"
     :style="{ marginTop: safeAreaInsets?.top + 'px' }"
   >
-    <view class="mt-12">
-      <image src="/static/logo.svg" alt="" class="w-28 h-28 block mx-auto" />
+    <view class="mt-48">
+      <image src="/static/logo.svg" alt="" class="w-112 h-112 block mx-auto" />
     </view>
-    <view class="text-center text-4xl main-title-color mt-4">unibest</view>
-    <view class="text-center text-2xl mt-2 mb-8">最好用的 uniapp 开发模板</view>
+    <view class="text-center text-36 main-title-color mt-16">unibest</view>
+    <view class="text-center text-24 mt-8 mb-32">666确实是最好用的 uniapp 开发模板</view>
 
-    <view class="text-justify max-w-100 m-auto text-4 indent mb-2">{{ description }}</view>
-    <view class="text-center mt-8">
+    <view class="text-justify max-w-400 m-auto text-16 indent mb-8">{{ description }}</view>
+    <view class="text-center mt-32">
       当前平台是：
       <text class="text-green-500">{{ PLATFORM.platform }}</text>
     </view>
-    <view class="text-center mt-4">
+    <view class="text-center mt-16">
       模板分支是：
       <text class="text-green-500">base</text>
     </view>

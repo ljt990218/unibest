@@ -8,10 +8,10 @@
 
 <template>
   <view
-    class="bg-white overflow-hidden pt-2 px-4"
+    class="bg-white overflow-hidden pt-8 px-16"
     :style="{ marginTop: safeAreaInsets?.top + 'px' }"
   >
-    <view class="text-center text-3xl mt-8">
+    <view class="text-center text-30 mt-32">
       鸽友们好，我是
       <text class="text-red-500">菲鸽</text>
     </view>
