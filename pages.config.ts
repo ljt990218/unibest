@@ -40,4 +40,19 @@ export default defineUniPages({
       },
     ],
   },
+  condition: {
+    current: 0,
+    list: [
+      {
+        name: '首页',
+        path: 'pages/index/index',
+        query: 'id=1',
+      },
+      {
+        name: '关于',
+        path: 'pages/about/about',
+        query: 'id=1',
+      },
+    ],
+  },
 })

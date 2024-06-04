@@ -2,9 +2,18 @@
 {
   style: {
     navigationBarTitleText: '关于',
+    navigationBarBackgroundColor: '#fff',
   },
 }
 </route>
+
+<script lang="ts" setup>
+import RequestComp from './components/request.vue'
+import UploadComp from './components/upload.vue'
+
+// 获取屏幕边界到安全区域距离
+const { safeAreaInsets } = uni.getSystemInfoSync()
+</script>
 
 <template>
   <view
@@ -19,14 +28,6 @@
     <UploadComp />
   </view>
 </template>
-
-<script lang="ts" setup>
-import RequestComp from './components/request.vue'
-import UploadComp from './components/upload.vue'
-
-// 获取屏幕边界到安全区域距离
-const { safeAreaInsets } = uni.getSystemInfoSync()
-</script>
 
 <style lang="scss" scoped>
 .test-css {

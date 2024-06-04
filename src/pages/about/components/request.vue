@@ -7,6 +7,25 @@
 }
 </route>
 
+<script lang="ts" setup>
+import { getFooAPI, postFooAPI, IFooItem } from '@/service/index/foo'
+
+const recommendUrl = ref('http://laf.run/signup?code=ohaOgIX')
+
+// const initialData = {
+//   name: 'initialData',
+//   id: '1234',
+// }
+const initialData = undefined
+// 适合少部分全局性的接口————多个页面都需要的请求接口，额外编写一个 Service 层
+const { loading, error, data, run } = useRequest<IFooItem>(() => getFooAPI('菲鸽'), {
+  initialData,
+})
+const reset = () => {
+  data.value = initialData
+}
+</script>
+
 <template>
   <view class="p-24 text-center">
     <view class="my-8">使用的是 laf 云后台</view>
@@ -36,22 +55,3 @@
     <wd-button type="error" @click="reset" class="my-24" :disabled="!data">重置数据</wd-button>
   </view>
 </template>
-
-<script lang="ts" setup>
-import { getFooAPI, postFooAPI, IFooItem } from '@/service/index/foo'
-
-const recommendUrl = ref('http://laf.run/signup?code=ohaOgIX')
-
-// const initialData = {
-//   name: 'initialData',
-//   id: '1234',
-// }
-const initialData = undefined
-// 适合少部分全局性的接口————多个页面都需要的请求接口，额外编写一个 Service 层
-const { loading, error, data, run } = useRequest<IFooItem>(() => getFooAPI('菲鸽'), {
-  initialData,
-})
-const reset = () => {
-  data.value = initialData
-}
-</script>

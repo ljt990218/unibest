@@ -7,6 +7,10 @@
 }
 </route>
 
+<script lang="ts" setup>
+const { loading, data, run } = useUpload({ user: '菲鸽' })
+</script>
+
 <template>
   <view class="p-16 text-center">
     <wd-button @click="run">选择图片并上传</wd-button>
@@ -20,10 +24,6 @@
     </template>
   </view>
 </template>
-
-<script lang="ts" setup>
-const { loading, data, run } = useUpload({ user: '菲鸽' })
-</script>
 
 <style lang="scss" scoped>
 //

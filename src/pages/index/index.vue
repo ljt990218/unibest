@@ -7,28 +7,6 @@
   },
 }
 </route>
-<template>
-  <view
-    class="bg-white overflow-hidden pt-8 px-16"
-    :style="{ marginTop: safeAreaInsets?.top + 'px' }"
-  >
-    <view class="mt-48">
-      <image src="/static/logo.svg" alt="" class="w-112 h-112 block mx-auto" />
-    </view>
-    <view class="text-center text-36 main-title-color mt-16">unibest</view>
-    <view class="text-center text-24 mt-8 mb-32">666确实是最好用的 uniapp 开发模板</view>
-
-    <view class="text-justify max-w-400 m-auto text-16 indent mb-8">{{ description }}</view>
-    <view class="text-center mt-32">
-      当前平台是：
-      <text class="text-green-500">{{ PLATFORM.platform }}</text>
-    </view>
-    <view class="text-center mt-16">
-      模板分支是：
-      <text class="text-green-500">base</text>
-    </view>
-  </view>
-</template>
 
 <script lang="ts" setup>
 import PLATFORM from '@/utils/platform'
@@ -44,10 +22,34 @@ const description = ref(
   'unibest 是一个集成了多种工具和技术的 uniapp 开发模板，由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI + VSCode 构建，模板具有代码提示、自动格式化、统一配置、代码片段等功能，并内置了许多常用的基本组件和基本功能，让你编写 uniapp 拥有 best 体验。',
 )
 
-onLoad(() => {
+onLoad((opt) => {
+  console.log('opt ==>', opt)
   console.log(author)
 })
 </script>
+
+<template>
+  <view
+    class="bg-white overflow-hidden pt-8 px-16"
+    :style="{ marginTop: safeAreaInsets?.top + 'px' }"
+  >
+    <view class="mt-48">
+      <image src="/static/logo.svg" alt="" class="w-112 h-112 block mx-auto" />
+    </view>
+    <view class="text-center text-36 main-title-color mt-16">unibest</view>
+    <view class="text-center text-24 mt-8 mb-32">确实是最好用的 uniapp 开发模板</view>
+
+    <view class="text-justify max-w-400 m-auto text-16 indent mb-8">{{ description }}</view>
+    <view class="text-center mt-32">
+      当前平台是：
+      <text class="text-green-500">{{ PLATFORM.platform }}</text>
+    </view>
+    <view class="text-center mt-16">
+      模板分支是：
+      <text class="text-green-500">base</text>
+    </view>
+  </view>
+</template>
 
 <style>
 .main-title-color {
