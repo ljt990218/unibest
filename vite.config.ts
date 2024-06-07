@@ -16,6 +16,9 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import ViteRestart from 'vite-plugin-restart'
+// @see https://github.com/wswmsword/postcss-mobile-forever
+import viewport from 'postcss-mobile-forever'
+import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
@@ -99,10 +102,14 @@ export default ({ command, mode }) => {
     css: {
       postcss: {
         plugins: [
-          // autoprefixer({
-          //   // 指定目标浏览器
-          //   overrideBrowserslist: ['> 1%', 'last 2 versions'],
-          // }),
+          autoprefixer({
+            // 指定目标浏览器
+            overrideBrowserslist: ['> 1%', 'last 2 versions'],
+          }),
+          viewport({
+            appSelector: '#app',
+            viewportWidth: 375,
+          }),
         ],
       },
     },

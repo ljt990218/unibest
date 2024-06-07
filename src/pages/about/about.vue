@@ -24,6 +24,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
       鸽友们好，我是
       <text class="text-red-500">菲鸽</text>
     </view>
+
     <RequestComp />
     <UploadComp />
   </view>

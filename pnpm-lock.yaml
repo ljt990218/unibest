@@ -178,11 +178,14 @@ importers:
         specifier: ^15.2.0
         version: 15.2.2
       postcss:
-        specifier: ^8.4.32
+        specifier: ^8.4.38
         version: 8.4.38
       postcss-html:
         specifier: ^1.5.0
         version: 1.7.0
+      postcss-mobile-forever:
+        specifier: ^4.1.4
+        version: 4.1.4(postcss@8.4.38)
       postcss-scss:
         specifier: ^4.0.9
         version: 4.0.9(postcss@8.4.38)
@@ -4579,6 +4582,11 @@ packages:
 
   postcss-media-query-parser@0.2.3:
     resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
+
+  postcss-mobile-forever@4.1.4:
+    resolution: {integrity: sha512-/pf7nhOORMrKmniI4fJDUNmj3y/8ENibHvOAeP1Vpd1ulSmq1Q0ZgKtYLQs4CauGHhvZRltLN56yiyX8y3SZFg==}
+    peerDependencies:
+      postcss: ^8.0.0
 
   postcss-modules-extract-imports@3.1.0:
     resolution: {integrity: sha512-k3kNe0aNFQDAZGbin48pL2VNidTF0w4/eASDsxlyspobzU3wZQLOGj7L9gfRe0Jo9/4uud09DsjFNH7winGv8Q==}
@@ -11501,6 +11509,10 @@ snapshots:
       postcss: 8.4.38
 
   postcss-media-query-parser@0.2.3: {}
+
+  postcss-mobile-forever@4.1.4(postcss@8.4.38):
+    dependencies:
+      postcss: 8.4.38
 
   postcss-modules-extract-imports@3.1.0(postcss@8.4.38):
     dependencies:
